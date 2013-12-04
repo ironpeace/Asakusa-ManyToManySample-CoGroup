@@ -1,0 +1,13 @@
+digraph {
+    "fc7cfc8a-c5d0-4f52-8bee-4f1579255e38" [shape=box, label="@Extend\nextend"];
+    "0465a94a-6847-48be-a611-def554be7513" [shape=invhouse, label="modelA"];
+    "88d89350-24a9-4f14-b4f5-63c054eb6f19" [shape=invhouse, label="modelB"];
+    "9dde8171-ad62-481f-be74-97a3529f3471" [shape=box, label="@CoGroup\nMainOperator.m2mJoined"];
+    "e10e3767-36ca-4391-9648-4b05d34bc5a9" [shape=box, label="@Extend\nextend"];
+    "2aacd4a1-a824-4d9b-bc4e-dead98d24605" [shape=invhouse, label="modelAB"];
+    "fc7cfc8a-c5d0-4f52-8bee-4f1579255e38" -> "9dde8171-ad62-481f-be74-97a3529f3471" [label="out>listB"];
+    "0465a94a-6847-48be-a611-def554be7513" -> "e10e3767-36ca-4391-9648-4b05d34bc5a9" [label="port>in"];
+    "88d89350-24a9-4f14-b4f5-63c054eb6f19" -> "fc7cfc8a-c5d0-4f52-8bee-4f1579255e38" [label="port>in"];
+    "9dde8171-ad62-481f-be74-97a3529f3471" -> "2aacd4a1-a824-4d9b-bc4e-dead98d24605" [label="listAB>port"];
+    "e10e3767-36ca-4391-9648-4b05d34bc5a9" -> "9dde8171-ad62-481f-be74-97a3529f3471" [label="out>listA"];
+}

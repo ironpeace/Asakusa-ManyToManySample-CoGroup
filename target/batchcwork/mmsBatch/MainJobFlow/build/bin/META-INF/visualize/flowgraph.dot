@@ -1,0 +1,13 @@
+digraph {
+    "493fcdd9-6177-401a-8e6c-53de7bc89a9f" [shape=box, label="@Extend\nextend"];
+    "cc28c78a-c994-4d35-a343-33445eb4b986" [shape=box, label="@Extend\nextend"];
+    "a00a9911-d37e-49ba-af90-b6d405e8f511" [shape=invhouse, label="modelB"];
+    "95543c0e-d985-4a7a-ab7a-8cb3810198e1" [shape=box, label="@CoGroup\nMainOperator.m2mJoined"];
+    "f888a679-54bc-47ca-8068-1f28c9a951e4" [shape=invhouse, label="modelAB"];
+    "5db0f640-d893-451c-8391-d05e767e37a7" [shape=invhouse, label="modelA"];
+    "493fcdd9-6177-401a-8e6c-53de7bc89a9f" -> "95543c0e-d985-4a7a-ab7a-8cb3810198e1" [label="out>listA"];
+    "cc28c78a-c994-4d35-a343-33445eb4b986" -> "95543c0e-d985-4a7a-ab7a-8cb3810198e1" [label="out>listB"];
+    "a00a9911-d37e-49ba-af90-b6d405e8f511" -> "cc28c78a-c994-4d35-a343-33445eb4b986" [label="port>in"];
+    "95543c0e-d985-4a7a-ab7a-8cb3810198e1" -> "f888a679-54bc-47ca-8068-1f28c9a951e4" [label="listAB>port"];
+    "5db0f640-d893-451c-8391-d05e767e37a7" -> "493fcdd9-6177-401a-8e6c-53de7bc89a9f" [label="port>in"];
+}

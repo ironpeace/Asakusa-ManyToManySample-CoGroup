@@ -1,0 +1,14 @@
+batch: mmsBatch
+flow: MainJobFlow
+    input:
+        modelA (teppeistudio.jobflow.io.ModelAFromCsv)
+        modelB (teppeistudio.jobflow.io.ModelBFromCsv)
+    output:
+        modelAB (teppeistudio.jobflow.io.ModelABtoCsv)
+    flow: teppeistudio.jobflow.MainJobFlow
+        input: InputDescription{name=modelA, type=class teppeistudio.modelgen.dmdl.model.ModelA}
+        output: OutputDescription{name=modelAB, type=class teppeistudio.modelgen.dmdl.model.ModelAb}
+        input: InputDescription{name=modelB, type=class teppeistudio.modelgen.dmdl.model.ModelB}
+        operator: com.asakusafw.vocabulary.flow.util.CoreOperatorFactory$Extend#toString([])[]
+        operator: com.asakusafw.vocabulary.flow.util.CoreOperatorFactory$Extend#toString([])[]
+        operator: teppeistudio.operator.MainOperator#m2mJoined([interface java.util.List, interface java.util.List, interface com.asakusafw.runtime.core.Result])[]
